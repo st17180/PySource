@@ -15,7 +15,7 @@ current objectives
   - [ ] mem usage as usage of total available in GB
     - [ ] add switch to change results from GB to MB or TB etc
   - [ ] disk usage as useage of total available in GB
-    -[ ] add switch to change results from GB to MB or TB etc
+    - [ ] add switch to change results from GB to MB or TB etc
 - [ ] create GUI area and setup to pipe the functions written before to
   - [ ] area for basic text results, and any switchs for them ( change from GB to MB etc )
   - [ ] area for graphs from matplotlib
