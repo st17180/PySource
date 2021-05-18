@@ -1,6 +1,9 @@
 # PySource
 A system independent resource monitor written in python with psutil, mathplotlib, and TKinter
 
+## The Idea
+A Simple GUI program to view system information like cpu/memory/disk usage. the user will be able to save a copy of the currently displayed info, adjust how the info is shown etc.
+
 ## Rescrictions
 depend on as few external librarys as possible, PSUTIL, TKinter and matplotlib are expected
 keep seperate layers functions organized using oop where apropreate.
