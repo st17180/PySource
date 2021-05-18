@@ -8,7 +8,7 @@ A Simple GUI program to view system information like cpu/memory/disk usage. the 
 depend on as few external librarys as possible, PSUTIL, TKinter and matplotlib are expected
 keep seperate layers functions organized using oop where apropreate.
 different layers of the program
-- [X] a CLI test monitor for testing the process
+- [X] a CLI test monitor for testing the functions
 - [ ] base GUI ontop of the CLI tools
 - [ ] useage graphs for GUI
 
