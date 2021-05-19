@@ -15,8 +15,9 @@ different layers of the program
 ## current plan 
 - [X] create functions to update and format systhem information into a human readable format
   - [X] cpu usage as list of values related to the cpu core number if above 1 to list of all available cores
+    -[X] add switch to change results from per core usage to total cpu usage
   - [X] mem usage as usage of total available in GB
-    - [ ] add switch to change results from GB to MB or TB etc
+    - [X] add switch to change results from GB to MB or TB etc
   - [ ] disk usage as useage of total available in GB
     - [ ] add switch to change results from GB to MB or TB etc
 - [ ] create GUI area and setup to pipe the functions written before to
