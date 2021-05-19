@@ -26,3 +26,5 @@ different layers of the program
 - [ ] create graphs of the results with mathplotlib to pipe to the above gui
   - [ ] add graph on call ( a button or something similar)
   - [ ] update graph automatically as results come in
+
+## relavent implications for this program
