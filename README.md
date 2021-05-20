@@ -37,15 +37,16 @@ keep seperate layers functions organized using oop where apropreate.
 
 ## testing
 - [ ] base functions
-  - [ ] cpu
-    - [ ] per_cpu/total toggle
-  - [ ] memory
-    - [ ] mb/gb toggle
+  - [X] cpu | see [#1](https://github.com/st17180/PySource/issues/1)
+    - [X] per_cpu/total toggle
+  - [X] memory | see [#1](https://github.com/st17180/PySource/issues/1)
+    - [X] mb/gb toggle
   - [ ] disk
     - [ ] mb/gl toggle
 - [ ] CLI
   - [ ] flag to change between human readable, and system useable
   - [ ] huamn readable menu to call each function (the tester for the base functions)
+  - [X] system useable formatting as a list | altho not what was being tested it was the inital set shown here [#1](https://github.com/st17180/PySource/issues/1)
 - [ ] GUI
   - [ ] basic text display from base functions
   - [ ] toggles for base functions to change the text display
