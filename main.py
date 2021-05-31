@@ -1,57 +1,78 @@
 import psutil
 
-# sys get
-class Monitor(): 
-    # returns list of cpu usages
-    def cpu(self, dpc):
-        if dpc == "per_core":
-            get = psutil.cpu_percent(interval=1,percpu=True)
-            core = 0
-            result = []
-            for item in get:
-                core = core + 1
-                c = (core, item)
-                result.append(c)
-        elif dpc == "total":
-            get = psutil.cpu_percent(interval=1,percpu=False)
-            result = ("total", get)
+# main class
+class Monitor():
+
+    # init for use case
+    def __init__(self, readability):
+        self.read = readability
+    
+    # cpu total/percore func
+    def cpu(self, total):
+        cputotal = psutil.cpu_percent(interval=1,percpu=False)
+        cpupercore = psutil.cpu_percent(interval=1,percpu=True)
+        if self.read:
+            if total:
+                return f"total CPU useage : {cputotal}"
+            else:
+                cores = cpupercore
+                result = ""
+                c = 0
+                for core in cores:
+                    result += f"{c}'s useage : {core}\n"
+                    c += 1
+                return result
         else:
-            print("mon.cpu misconfigured")
-        return result
-    # returns used and total memory
+            if total:
+                return cputotal
+            else:
+                return cpupercore
+    
+    # memory use mb/gb
     def mem(self, size):
-        get = psutil.virtual_memory()
-        if size == "mb":
-            result = (round(get[3] / 1000000, 2), round(get[0] / 1000000, 2))
-        elif size == "gb":
-            result = (round(get[3] / 1073741824, 2), round(get[0] / 1073741824, 2))
+        memory = psutil.virtual_memory()
+        if self.read:
+            if size == "mb":
+                return f"total ram memory useage : {round(memory[3] / 1000000, 2)}/{round(memory[0] / 1000000, 2)}"
+            elif size == "gb":
+                return f"total ram memory useage : {round(memory[3] / 1073741824, 2)}/{round(memory[0] / 1073741824, 2)}"
+            else:
+                return "the mem config is incorrect"
         else:
-            print("mon.mem misconfigured")
-        return result
-    # returns used and total disk
-    def disk(self):
-        get = psutil.disk_usage('/')
-        total = round(get[0] / 1073741824, 2)
-        used = round(get[1] / 1073741824, 2)
-        result = (used, "gb of", total)
-        return result
-
-# shorten class name
-mon = Monitor()
-
-# CLI MENU
-x = 0
-while x < 1:
-    awn = str(input("cpu, mem, disk or help : "))
-    if awn == "cpu":
-        print(mon.cpu("per_core"))
-    elif awn == "mem":
-        print(mon.mem("mb"))
-    elif awn == "disk":
-        print(mon.disk())
-    elif awn == "help":
-        print("quit to close the program, help to print this message, cpu to print cpu useage information, mem to print memory useage and total information or disk to print disk info about '/'")
-    elif awn == "quit":
-        x = 1
-    else:
-        continue
+            if size == "mb":
+                return round(memory[3] / 1000000, 2), round(memory[0] / 1000000, 2)
+            elif seize == "gb":
+                return round(memory[3] / 1073741824, 2), round(memory[0] / 1073741824, 2)
+            else:
+                return "the mem config is incorrect"
+    
+    # disk use mb/gb
+    def disk(self, size):
+        diskinfo = psutil.disk_usage(".")
+        if self.read:
+            if size == "mb":
+                return f"total disk memory useage : {round(diskinfo[1] / 1000000, 2)}/{round(diskinfo[0] / 1000000, 2)}"
+            elif size == "gb":
+                return f"total disk memory useage : {round(diskinfo[1] / 1073741824, 2)}/{round(diskinfo[0] / 1073741824, 2)}"
+        else:
+            if size == "mb":
+                return round(diskinfo[1] / 1000000, 2), round(diskinfo[0] / 1000000, 2)
+            elif size == "gb":
+                return round(diskinfo[1] / 1073741824, 2), round(diskinfo[0] / 1073741824, 2)
+   
+    # process listing
+    def process(self):
+        processes = psutil.process_iter()
+        result = []
+        for process in processes:
+            try:
+                processName = process.name()
+                processID = process.pid
+                if self.read:
+                    print(f"{processID} : {processName}")
+                else:
+                    a = (processName, processID)
+                    result.append(a)
+            except (psutil.NoSuchProcess, psutil,AccessDenied, psutil.ZombieProcess):
+                pass
+        return(result)
