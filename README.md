@@ -1,19 +1,17 @@
 # PySource
-A system independent resource monitor written in python with psutil, mathplotlib, and TKinter
+A system independent resource monitor written in python with psutil.
 
 ## The Idea
-A Simple GUI program to view system information like cpu/memory/disk usage. the user will be able to save a copy of the currently displayed info, adjust how the info is shown etc. through a GUI, or use a CLI to use the functions as they want.
+A program to view system information like cpu/memory/disk usage. the user will be able to save a copy of the currently displayed info, adjust how the info is shown etc. through a CLI for users, or to use the main as they want in their own code
 
 ## Rescrictions
-depend on as few external librarys as possible, PSUTIL, TKinter and matplotlib are expected
-keep seperate layers functions organized using oop where apropreate.
+depend on as few external librarys as resonable, (just psutil now)
 
 ## milestones 
-- [ ] the base functions on which the following milestones will be built to use ( unchecked as disk function only works on UNIX systems for now )
+- [X] the base functions on which the following milestones will be built to use ( unchecked as disk function only works on UNIX systems for now )
 - [X] a CLI tester for the functions
-- [ ] a CLI for people to use independly of the gui or in another program of their own
-- [ ] GUI ontop of the base functions.
-- [ ] useage graphs for the GUI
+- [X] a CLI for people to use  ( this and the tester are now one in the same, replacing the "read" flag to false will turn the CLI into the tester )
+- [ ] saving output to a file.
 
 ## current plan 
 - [X] create functions to update and format results into a format to be used by later sections like the GUI or CLI
@@ -21,44 +19,31 @@ keep seperate layers functions organized using oop where apropreate.
     - [X] add switch to change results from per core usage to total cpu usage
   - [X] mem usage as usage of total available in GB
     - [X] add switch to change results from GB to MB or TB etc
-  - [ ] disk usage as useage of total available in GB ( unchecked as it only currently works on UNIX systems with root '/' )
+  - [X] disk usage as useage of total available in GB
     - [X] add switch to change results from GB to MB or TB etc
-- [ ] create CLI to interact with the base functions directly
+- [X] create CLI to interact with the base functions directly
   - [X] a human readable mode
     - [X] small menu to call each function with help option
-  - [ ] a system useable mode
-    - [ ] documented expected formatting for each function
-- [ ] create GUI area and setup to pipe the functions written before to
-  - [ ] area for basic text results, and any switchs for them ( change from GB to MB etc )
-  - [ ] area for graphs from matplotlib
-- [ ] create graphs of the results with mathplotlib to pipe to the above gui
-  - [ ] add graph on call ( a button or something similar)
-  - [ ] update graph automatically as results come in
+  - [X] a system useable mode
+    - [X] documented expected formatting for each function
+  - [ ] add ability to save out to a file.
 
 ## testing
 - [ ] base functions
-  - [X] cpu | see [#1](https://github.com/st17180/PySource/issues/1)
-    - [X] per_cpu/total toggle
-  - [X] memory | see [#1](https://github.com/st17180/PySource/issues/1)
-    - [X] mb/gb toggle
+  - [ ] cpu
+    - [ ] per_cpu/total toggle
+  - [ ] memory
+    - [ ] mb/gb toggle
   - [ ] disk
-    - [ ] mb/gl toggle
+    - [ ] mb/gb toggle
 - [ ] CLI
   - [ ] flag to change between human readable, and system useable
-  - [ ] huamn readable menu to call each function (the tester for the base functions)
-  - [X] system useable formatting as a list | altho not what was being tested it was the inital set shown here [#1](https://github.com/st17180/PySource/issues/1)
-- [ ] GUI
-  - [ ] basic text display from base functions
-  - [ ] toggles for base functions to change the text display
-  - [ ] program management buttons ( exit, save results)
-  - [ ] graphing results in a chart
-
+  - [ ] huamn readable menu to call each function
+  - [ ] system useable formatting for each function
+  - [ ] output save option
 
 ## relavent implications
+
 #### some relavent implications for this program are 
 sustainability and future proofing, useability, functionality, legal
-#### why they are relavent to this program
-sustainability and future proofing, the concept for this program is to be a platform agnostic way to view system resources and useages. for this to be a reasonable goal the program will need to be easily worked on and adapted so it can continue to work on more than one system. as well as to be able to adapt to changes in the different sections of the program like the backend functions to get system resources or the graphical user interface.
 
-#### how they will be addressed when creating the program
-sustainability and future proofing, to address the need to have the program be easily adaptable in the future, and easyily modified for those potentional future changes I will be using as little external librarys as I can within reason, stick to a standard programming style (PEP8) and keep the program sectioned in planning and in programming like so. (base functions, GUI, testing tools, CLI).
