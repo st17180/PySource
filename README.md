@@ -28,18 +28,18 @@ depend on as few external librarys as resonable, (just psutil now)
     - [X] documented expected formatting for each function
   - [ ] add ability to save out to a file.
 
-## testing
-- [ ] base functions
-  - [ ] cpu
-    - [ ] per_cpu/total toggle
-  - [ ] memory
-    - [ ] mb/gb toggle
-  - [ ] disk
-    - [ ] mb/gb toggle
-- [ ] CLI
-  - [ ] flag to change between human readable, and system useable
-  - [ ] huamn readable menu to call each function
-  - [ ] system useable formatting for each function
+## testing see [Closed + Testing flags](https://github.com/st17180/PySource/issues?q=label%3ATesting+is%3Aclosed)
+- [X] base functions
+  - [X] cpu
+    - [X] per_cpu/total toggle
+  - [X] memory
+    - [X] mb/gb toggle
+  - [X] disk
+    - [X] mb/gb toggle
+- [X] CLI
+  - [X] flag to change between human readable, and system useable
+  - [X] huamn readable menu to call each function
+  - [X] system useable formatting for each function
   - [ ] output save option
 
 ## relavent implications
