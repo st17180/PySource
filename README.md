@@ -26,7 +26,7 @@ depend on as few external librarys as resonable, (just psutil now)
     - [X] small menu to call each function with help option
   - [X] a system useable mode
     - [X] documented expected formatting for each function
-  - [ ] add ability to save out to a file.
+  - [X] add ability to save out to a file.
 
 ## testing see [Closed + Testing flags](https://github.com/st17180/PySource/issues?q=label%3ATesting+is%3Aclosed)
 - [X] base functions
@@ -40,7 +40,7 @@ depend on as few external librarys as resonable, (just psutil now)
   - [X] flag to change between human readable, and system useable
   - [X] huamn readable menu to call each function
   - [X] system useable formatting for each function
-  - [ ] output save option
+  - [X] output save option
 
 ## relavent implications
 functionality Does the outcome work as intended and why it matters, useability does the outcome give the user freedom does it have error prevention and recoverey and is it consistent in this, NEED ONE MORE HERE, sustainability and future proofing will the outcome remain up to date and relevant.
