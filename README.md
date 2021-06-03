@@ -43,7 +43,13 @@ depend on as few external librarys as resonable, (just psutil now)
   - [ ] output save option
 
 ## relavent implications
-functionality, useability, aesthetics, sustainability and future proofing
-#### some relavent implications for this program are 
-sustainability and future proofing, useability, functionality, legal
+functionality Does the outcome work as intended and why it matters, useability does the outcome give the user freedom does it have error prevention and recoverey and is it consistent in this, NEED ONE MORE HERE, sustainability and future proofing will the outcome remain up to date and relevant.
+#### how they'll be addressed in this program
+for functionality each release of the program was tested to atleast have some level of the end goal in functionality, each commit pushing the program further in that direction, weather or not the program functions correctly matters because if a nonfunctional version was released and users update to it, it could break any of their projects that depend on it or their own personal use of the program may lead them to getting missinformation
+
+for useability the program was broken up into multiple layers, firstly weather or not it was going to be used by a human or another program in the "readability" varaiable the "Monitor" class asks for, as well as the many different function specific flags such as mb or gb in disk and memory functions. the user has complete freedom over what results they get so even though the default is made for human readable formatting they could just as easily make it use the systems format, as well as error prevention and recovery, if a function is configured it will just return a string saying as such, if the CLI getts a innapropreate responce it will correct the user both error prevention, and error recovery
+
+for NEED ONE MORE HERE
+
+for sustainability and future proofing each outcome was planned out ( and later even rewriten) for readable code, code that depended on as little 3rd party librarys as possible ( this was taken down to just psutil ) as well as minimal lines of code and work arounds, the less the program depends on other programs the lower the chance it breaks because of them, the less moving parts in a program then lower the points of failure. and making sure this is all written in a reliably readable way ensures the program will continue to be easily adpated to any changes that might be needed in the future making it alot more sustainable
 
