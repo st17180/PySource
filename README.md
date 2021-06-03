@@ -43,7 +43,7 @@ depend on as few external librarys as resonable, (just psutil now)
   - [ ] output save option
 
 ## relavent implications
-
+functionality, useability, aesthetics, sustainability and future proofing
 #### some relavent implications for this program are 
 sustainability and future proofing, useability, functionality, legal
 
