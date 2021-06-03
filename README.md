@@ -11,7 +11,7 @@ depend on as few external librarys as resonable, (just psutil now)
 - [X] the base functions on which the following milestones will be built to use ( unchecked as disk function only works on UNIX systems for now )
 - [X] a CLI tester for the functions
 - [X] a CLI for people to use  ( this and the tester are now one in the same, replacing the "read" flag to false will turn the CLI into the tester )
-- [ ] saving output to a file.
+- [X] saving output to a file.
 
 ## current plan 
 - [X] create functions to update and format results into a format to be used by later sections like the GUI or CLI
