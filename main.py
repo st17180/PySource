@@ -33,16 +33,16 @@ class Monitor():
         memory = psutil.virtual_memory()
         if self.read:
             if size == "mb":
-                return f"total ram memory useage : {round(memory[3] / 1000000, 2)}/{round(memory[0] / 1000000, 2)}"
+                return f"total ram memory useage : {round(memory[3] / 1000000, 2)}MB / {round(memory[0] / 1000000, 2)}MB"
             elif size == "gb":
-                return f"total ram memory useage : {round(memory[3] / 1073741824, 2)}/{round(memory[0] / 1073741824, 2)}"
+                return f"total ram memory useage : {round(memory[3] / 1073741824, 2)}GB / {round(memory[0] / 1073741824, 2)}GB"
             else:
                 return "the mem config is incorrect"
         else:
             if size == "mb":
-                return round(memory[3] / 1000000, 2), round(memory[0] / 1000000, 2)
-            elif seize == "gb":
-                return round(memory[3] / 1073741824, 2), round(memory[0] / 1073741824, 2)
+                return round(memory[3] / 1000000, 2), round(memory[0] / 1000000, 2), 'mb'
+            elif size == "gb":
+                return round(memory[3] / 1073741824, 2), round(memory[0] / 1073741824, 2), 'gb'
             else:
                 return "the mem config is incorrect"
     
@@ -51,14 +51,14 @@ class Monitor():
         diskinfo = psutil.disk_usage(".")
         if self.read:
             if size == "mb":
-                return f"total disk memory useage : {round(diskinfo[1] / 1000000, 2)}/{round(diskinfo[0] / 1000000, 2)}"
+                return f"total disk memory useage : {round(diskinfo[1] / 1000000, 2)}MB / {round(diskinfo[0] / 1000000, 2)}MB"
             elif size == "gb":
-                return f"total disk memory useage : {round(diskinfo[1] / 1073741824, 2)}/{round(diskinfo[0] / 1073741824, 2)}"
+                return f"total disk memory useage : {round(diskinfo[1] / 1073741824, 2)}GB / {round(diskinfo[0] / 1073741824, 2)}GB"
         else:
             if size == "mb":
-                return round(diskinfo[1] / 1000000, 2), round(diskinfo[0] / 1000000, 2)
+                return round(diskinfo[1] / 1000000, 2), round(diskinfo[0] / 1000000, 2), 'mb'
             elif size == "gb":
-                return round(diskinfo[1] / 1073741824, 2), round(diskinfo[0] / 1073741824, 2)
+                return round(diskinfo[1] / 1073741824, 2), round(diskinfo[0] / 1073741824, 2), 'gb'
    
     # process listing
     def process(self):
