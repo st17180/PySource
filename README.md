@@ -9,9 +9,9 @@ depend on as few external librarys as resonable, (just psutil now)
 
 ## milestones 
 - [X] the base functions on which the following milestones will be built to use
-- [X] a CLI tester for the functions
-- [X] a CLI for people to use ( the tester is now seperate from this, see https://github.com/st17180/PySource/issues/3#issuecomment-851698651 )
-- [X] saving output to a file.
+- [X] a CLI tester for the functions ( tester is no longer in source, see [v2 testing](https://github.com/st17180/PySource/issues/3#issuecomment-851698651)
+- [X] a CLI for people to use
+- [X] saving output to a file
 
 ## current plan 
 - [X] create functions to update and format results into a format to be used by later sections like the GUI or CLI
@@ -26,7 +26,7 @@ depend on as few external librarys as resonable, (just psutil now)
     - [X] small menu to call each function with help option
   - [X] a system useable mode
     - [X] documented expected formatting for each function
-  - [X] add ability to save out to a file.
+  - [X] add ability to save out to a file
 
 ## testing see [Closed + Testing flags](https://github.com/st17180/PySource/issues?q=label%3ATesting+is%3Aclosed) feedback is addressed under the issues tab take a look !
 - [X] base functions
