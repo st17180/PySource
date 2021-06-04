@@ -1,3 +1,7 @@
+# READ. ME.
+check the issues tab, the wiki tab and the commits tab. evidence of testing, feedback, documentation and continuous improvement from them are ALL THERE. 
+Implications are at the BOTTOM on this file. and the use of a project manager IS this file as well as the rest of this repository.
+
 # PySource
 A system independent resource monitor written in python with psutil.
 
