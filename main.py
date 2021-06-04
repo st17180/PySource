@@ -69,7 +69,7 @@ class Monitor():
                 processName = process.name()
                 processID = process.pid
                 if self.read:
-                    print(f"{processID} : {processName}")
+                    print(f"{processID}\t:\t{processName}")
                 else:
                     a = (processName, processID)
                     result.append(a)

@@ -3,9 +3,9 @@ from main import Monitor
 mon = Monitor(True)
 
 print("Python System Monitor, Try a function below \n\
-Options : cpu, mem, disk, processes, help, exit")
+Options : cpu, mem, disk, processes, save, help, exit")
 while True:
-    awn = input("Option : ")
+    awn = input("Option > ")
     if awn == "cpu":
         tf = input("Print total, yes/no : ")
         if tf == "yes":
@@ -31,7 +31,8 @@ while True:
         else:
             print("you must use either mb or gb")
     elif awn == "processes":
-        print(mon.process())
+        print("PID\t:\tNAME")
+        mon.process()
     elif awn == "save":
         with open("output.txt", "a") as save:
             x = str(datetime.datetime.now()) + "\n"
@@ -44,11 +45,12 @@ while True:
             save.write(x)
             x = mon.disk("mb") + "\n"
             save.write(x)
+            save.write("PID\t:\tNAME\n")
             for processes in Monitor(False).process():
-                x = f"{processes[1]} : {processes[0]}\n"
+                x = f"{processes[1]}\t:\t{processes[0]}\n"
                 save.write(x)
             save.write("\n")
     elif awn == "exit":
         exit()
     else:
-        print("Must be cpu, mem, disk, processes, help or exit")
+        print("Must be cpu, mem, disk, processes, save, help or exit")
