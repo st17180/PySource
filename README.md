@@ -8,9 +8,9 @@ A program to view system information like cpu/memory/disk usage. the user will b
 depend on as few external librarys as resonable, (just psutil now)
 
 ## milestones 
-- [X] the base functions on which the following milestones will be built to use ( unchecked as disk function only works on UNIX systems for now )
+- [X] the base functions on which the following milestones will be built to use
 - [X] a CLI tester for the functions
-- [X] a CLI for people to use  ( this and the tester are now one in the same, replacing the "read" flag to false will turn the CLI into the tester )
+- [X] a CLI for people to use ( the tester is now seperate from this, see https://github.com/st17180/PySource/issues/3#issuecomment-851698651 )
 - [X] saving output to a file.
 
 ## current plan 
