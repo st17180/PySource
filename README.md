@@ -9,7 +9,13 @@ A system independent resource monitor written in python with psutil.
 A program to view system information like cpu/memory/disk usage. the user will be able to save a copy of the currently displayed info, adjust how the info is shown etc. through a CLI for users, or to use the main as they want in their own code
 
 ## Rescrictions
-depend on as few external librarys as resonable, (just psutil now)
+depend on as few external librarys as resonable, just one! psutil 👍
+
+### Windows users read me
+depending on how python was installed to the system, it may need to be run with administrator privilages. understandably seen as a security flaw this is nothing i can fix and is the result of mismatched installations from the windows store to the python.org installer as well as 3rd party solutions 
+
+### unix users read me
+depending on the permission of your "wheel" group, the user running the CLI may need more privilages. (running this as root has never caused me issues but could easily be a security flaw and as such I cant recomend it)
 
 ## milestones 
 - [X] the base functions on which the following milestones will be built to use
