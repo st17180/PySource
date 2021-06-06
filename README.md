@@ -5,6 +5,23 @@ Implications are at the BOTTOM on this file. and the use of a project manager IS
 # PySource
 A system independent resource monitor written in python with psutil.
 
+## Installation
+
+### windows
+make sure an up to date version of python is installed
+use PIP to install the "psutil" package
+download and extract the ZIP under the green "code" button
+run the cli.py! (i recomend against running it in a windows terminal as it apparently can get visually buggy, the best use case ive seen is in something like VS code)
+
+to update you will need to redownload the ZIP (git is available for windows but is outside the scope of this wiki)
+
+### UNIX
+make sure up to date versions of python pip and git are installed
+in shell run `pip instal psutil --user` (the user flag may not be needed feel free to adjust as aproprate for your system/use case) `git clone https://github.com/st17180/PySource.git` `cd PySource` 
+to run just give python the path to `cli.py` so if your in the PySource directory just `python cli.py`.
+
+to update you can just go back to `PySource` directory and `git pull`
+
 ## The Idea
 A program to view system information like cpu/memory/disk usage. the user will be able to save a copy of the currently displayed info, adjust how the info is shown etc. through a CLI for users, or to use the main as they want in their own code
 
