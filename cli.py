@@ -9,13 +9,15 @@ while True:
     if awn == "cpu":
         tf = input("Print total, yes/no : ")
         if tf == "yes":
+            print("of 100%")
             print(mon.cpu(True))
         elif tf == "no":
+            print("of 100% per core")
             print(mon.cpu(False))
         else:
             print("you must use either yes or no")
     elif awn == "mem":
-        size = input("size : mb/gb : ")
+        size = input("size : mb/gb (Megabyte or Gigabyte) : ")
         if size == "mb":
             print(mon.mem("mb"))
         elif size == "gb":
@@ -23,7 +25,7 @@ while True:
         else:
             print("you must use either mb or gb")
     elif awn == "disk":
-        size = input("size : mb/gb : ")
+        size = input("size : mb/gb (Megabyte or Gigabyte) : ")
         if size == "mb":
             print(mon.disk("mb"))
         elif size == "gb":
